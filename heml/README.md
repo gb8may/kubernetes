@@ -1,3 +1,5 @@
+![helm](https://user-images.githubusercontent.com/35708820/82477925-8384f980-9aa6-11ea-91ca-9feb0d57b1fd.jpg)
+
 ### Install Helm
 
 ```
