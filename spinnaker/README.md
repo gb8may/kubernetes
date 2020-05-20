@@ -30,3 +30,14 @@ $ kubectl get nodes
 ```
 $ hal config provider kubernetes enable
 ```
+
+- Add a Kubernetes account
+```
+$ hal config provider kubernetes account add my-k8s-account --provider-version v2 --context $(kubectl config current-context)
+```
+
+- Enable artifacts
+```
+$ hal config features edit --artifacts true
+```
+
