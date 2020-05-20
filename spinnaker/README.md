@@ -10,7 +10,14 @@
 Creating a Halyard with [Docker](https://docs.docker.com/engine/install/) container
 > *Install Docker on the main host you use to access your Kubernetes Cluster (In my case, I'm using EKS)
 
+- Download and run Halyard Docker image
 ```
 $ mkdir ~/.hal
 $ docker run --name halyard -v ~/.hal:/home/spinnaker/.hal -v ~/.kube/config:/home/spinnaker/.kube/config -d gcr.io/spinnaker-marketplace/halyard:stable
 ```
+
+- Get into container
+```
+$ docker exec -it halyard bash
+```
+
