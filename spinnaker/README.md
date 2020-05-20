@@ -21,3 +21,12 @@ $ docker run --name halyard -v ~/.hal:/home/spinnaker/.hal -v ~/.kube/config:/ho
 $ docker exec -it halyard bash
 ```
 
+- Inside the container, check if you can run Kubernetes commands
+```
+$ kubectl get nodes
+```
+
+- Set the provider. More information about providers [here](https://www.spinnaker.io/setup/install/providers/).
+```
+$ hal config provider kubernetes enable
+```
