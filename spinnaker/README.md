@@ -5,4 +5,11 @@
 
 > *For official guide and documentation you can go to the [Spinnaker.io](https://www.spinnaker.io/setup/) website.*
 
-### Installing Halyard
+#### Installing Halyard
+
+Creating a Halyard with [Docker](https://docs.docker.com/engine/install/) container
+
+```
+mkdir ~/.hal
+docker run --name halyard -v ~/.hal:/home/spinnaker/.hal -v ~/.kube/config:/home/spinnaker/.kube/config -d gcr.io/spinnaker-marketplace/halyard:stable
+```
