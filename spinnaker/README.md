@@ -58,10 +58,37 @@ $ helm install minio --namespace spinnaker --set accessKey="myaccesskey" --set s
 $ helm install --name minio --namespace spinnaker --set accessKey="myaccesskey" --set secretKey="mysecretkey" --set persistence.enabled=false stable/minio
 ```
 
-- Let's disable S3 versioning no minio.
+- Let's disable S3 versioning on minio and change storage type to minio/s3
 > *Get into container again to run this commands
 ```
 mkdir ~/.hal/default/profiles
 echo "spinnaker.s3.versioning: false" > ~/.hal/default/profiles/front50-local.yml
+hal config storage s3 edit --endpoint http://minio:9000 --access-key-id "myaccesskey" --secret-access-key "mysecretkey"
+hal config storage s3 edit --path-style-access true
+hal config storage edit --type s3
 ```
 
+- Now let's deploy Spinnaker
+```
+$ hal deploy apply
+```
+
+- Now let's change the service type to a load balancer
+```
+$ kubectl -n spinnaker edit svc spin-deck
+$ kubectl -n spinnaker edit svc spin-gate
+```
+
+- Make sure that load balancer it's working and save the external address for both load balancers
+```
+$ kubectl get svc -n spinnaker
+```
+
+- Now deploy again with addresses of load balancers
+```
+$ hal config security ui edit --override-base-url "http://<LoadBalancerIP>:9000"
+$ hal config security api edit --override-base-url "http://<LoadBalancerIP>:8084"
+$ hal deploy apply
+```
+
+Have fun!
