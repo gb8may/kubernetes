@@ -1,4 +1,4 @@
-<img src="https://user-images.githubusercontent.com/35708820/82478149-dd85bf00-9aa6-11ea-9382-43f8b0c1ca57.png"  width="120" height="120">
+<img src="https://user-images.githubusercontent.com/35708820/82478149-dd85bf00-9aa6-11ea-9382-43f8b0c1ca57.png"  width="150" height="150">
 
 
 ## Install Spinnaker
