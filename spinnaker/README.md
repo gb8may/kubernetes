@@ -41,3 +41,27 @@ $ hal config provider kubernetes account add my-k8s-account --provider-version v
 $ hal config features edit --artifacts true
 ```
 
+- Set whereb to install Spinnaker
+```
+$ hal config deploy edit --type distributed --account-name my-k8s-account
+```
+
+- Create a Spinnaker namespace and install minio on your Kubernetes cluster
+> *Get out of the container, and run this commands on the container host.
+```
+$ kubectl create ns spinnaker
+
+# For Helm v3+
+$ helm install minio --namespace spinnaker --set accessKey="myaccesskey" --set secretKey="mysecretkey" --set persistence.enabled=false stable/minio
+
+#For Helm v2+
+$ helm install --name minio --namespace spinnaker --set accessKey="myaccesskey" --set secretKey="mysecretkey" --set persistence.enabled=false stable/minio
+```
+
+- Let's disable S3 versioning no minio.
+> *Get into container again to run this commands
+```
+mkdir ~/.hal/default/profiles
+echo "spinnaker.s3.versioning: false" > ~/.hal/default/profiles/front50-local.yml
+```
+
