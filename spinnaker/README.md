@@ -1,5 +1,6 @@
 <img src="https://user-images.githubusercontent.com/35708820/82478149-dd85bf00-9aa6-11ea-9382-43f8b0c1ca57.png"  width="150" height="150">
 
+Spinnaker is a continuous delivery platform, originally developed by Netflix, for releasing software changes rapidly and reliably. Spinnaker makes it easier for developers to focus on writing code without having to worry about the underlying cloud infrastructure. It integrates seamlessly with Jenkins and other popular build tools.
 
 ## Install Spinnaker on Kubernetes
 
