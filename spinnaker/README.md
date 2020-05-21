@@ -10,7 +10,7 @@ Halyard is a command-line administration tool that manages the lifecycle of your
 > *Halyard is compatible only with Debian/Linux and MacOS
 
 ##### Halyard with [Docker](https://docs.docker.com/engine/install/) container
-> *Install Docker on the main host you use to access your Kubernetes Cluster (In my case, I'm using EKS)
+> *Install Docker on host you use to access your Kubernetes Cluster (In my case, I'm using a Cloud9 Environment and EKS for cluster)
 
 - Download and run Halyard Docker image
 ```
