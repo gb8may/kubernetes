@@ -27,6 +27,7 @@ $ docker exec -it halyard bash
 ```
 $ kubectl get nodes
 ```
+#### 2. Choose a Provider
 
 - Set the provider. More information about providers [here](https://www.spinnaker.io/setup/install/providers/).
 ```
