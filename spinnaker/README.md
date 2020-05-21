@@ -34,6 +34,8 @@ $ kubectl get nodes
 $ hal config provider kubernetes enable
 ```
 
+#### 3. Choose an Environment
+
 - Add a Kubernetes account
 ```
 $ hal config provider kubernetes account add my-k8s-account --provider-version v2 --context $(kubectl config current-context)
@@ -60,6 +62,8 @@ $ helm install minio --namespace spinnaker --set accessKey="myaccesskey" --set s
 #For Helm v2+
 $ helm install --name minio --namespace spinnaker --set accessKey="myaccesskey" --set secretKey="mysecretkey" --set persistence.enabled=false stable/minio
 ```
+
+#### 4. Choose a Storage Service
 
 - Let's disable S3 versioning on minio and change storage type to minio/s3
 > *Get into container again to run this commands
