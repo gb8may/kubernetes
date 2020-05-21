@@ -7,10 +7,10 @@
 
 #### 1. Installing Halyard
 Halyard is a command-line administration tool that manages the lifecycle of your Spinnaker deployment, including writing & validating your deployment’s configuration, deploying each of Spinnaker’s microservices, and updating the deployment.
-> *Halyard is compatible only with Debian/Linux and MacOS
+> *Halyard is compatible only with Debian/Linux and MacOS*
 
 ##### Halyard with [Docker](https://docs.docker.com/engine/install/) container
-> *Install Docker on host you use to access your Kubernetes Cluster (In my case, I'm using a Cloud9 Environment and EKS for cluster)
+> *Install Docker on host you use to access your Kubernetes Cluster (In my case, I'm using a Cloud9 Environment and EKS for cluster)*
 
 - Download and run Halyard Docker image
 ```
