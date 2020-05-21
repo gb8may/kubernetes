@@ -83,7 +83,7 @@ hal config storage edit --type s3
 $ hal deploy apply
 ```
 
-- Now let's change the service type to a load balancer
+- Let's change the service type to a load balancer
 ```
 $ kubectl -n spinnaker edit svc spin-deck
 $ kubectl -n spinnaker edit svc spin-gate
@@ -94,7 +94,7 @@ $ kubectl -n spinnaker edit svc spin-gate
 $ kubectl get svc -n spinnaker
 ```
 
-- Now deploy again with addresses of load balancers
+- Redeploy with addresses of load balancers
 ```
 $ hal config security ui edit --override-base-url "http://<LoadBalancerIP>:9000"
 $ hal config security api edit --override-base-url "http://<LoadBalancerIP>:8084"
