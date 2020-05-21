@@ -6,8 +6,10 @@
 > *For official guide and documentation you can go to the [Spinnaker.io](https://www.spinnaker.io/setup/) website.*
 
 #### Installing Halyard
+Halyard is a command-line administration tool that manages the lifecycle of your Spinnaker deployment, including writing & validating your deployment’s configuration, deploying each of Spinnaker’s microservices, and updating the deployment.
+> *Halyard is compatible only with Debian/Linux and MacOS
 
-Creating a Halyard with [Docker](https://docs.docker.com/engine/install/) container
+##### Halyard with [Docker](https://docs.docker.com/engine/install/) container
 > *Install Docker on the main host you use to access your Kubernetes Cluster (In my case, I'm using EKS)
 
 - Download and run Halyard Docker image
