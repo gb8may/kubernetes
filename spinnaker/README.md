@@ -75,6 +75,8 @@ hal config storage s3 edit --path-style-access true
 hal config storage edit --type s3
 ```
 
+#### 5. Deploy Spinnaker
+
 - Now let's deploy Spinnaker
 ```
 $ hal deploy apply
