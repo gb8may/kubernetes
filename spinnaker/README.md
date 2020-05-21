@@ -52,7 +52,7 @@ $ hal config deploy edit --type distributed --account-name my-k8s-account
 ```
 
 - Create a Spinnaker namespace and install minio on your Kubernetes cluster
-> *Get out of the container, and run this commands on the container host.
+> *Get out of the container, and run this commands on the container host.*
 ```
 $ kubectl create ns spinnaker
 
@@ -67,7 +67,7 @@ $ helm install --name minio --namespace spinnaker --set accessKey="myaccesskey" 
 #### 4. Choose a Storage Service
 
 - Let's disable S3 versioning on minio and change storage type to minio/s3
-> *Get into container again to run this commands
+> *Get into container again to run this commands*
 ```
 mkdir ~/.hal/default/profiles
 echo "spinnaker.s3.versioning: false" > ~/.hal/default/profiles/front50-local.yml
