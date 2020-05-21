@@ -62,6 +62,7 @@ $ helm install minio --namespace spinnaker --set accessKey="myaccesskey" --set s
 #For Helm v2+
 $ helm install --name minio --namespace spinnaker --set accessKey="myaccesskey" --set secretKey="mysecretkey" --set persistence.enabled=false stable/minio
 ```
+> *If you have a dynamic volume remove the "--persistence.enabled=false"*
 
 #### 4. Choose a Storage Service
 
@@ -101,3 +102,5 @@ $ hal deploy apply
 ```
 
 Have fun!
+
+
