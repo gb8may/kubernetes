@@ -46,7 +46,7 @@ $ hal config provider kubernetes account add my-k8s-account --provider-version v
 $ hal config features edit --artifacts true
 ```
 
-- Set whereb to install Spinnaker
+- Set where to install Spinnaker
 ```
 $ hal config deploy edit --type distributed --account-name my-k8s-account
 ```
