@@ -101,6 +101,6 @@ $ hal config security api edit --override-base-url "http://<LoadBalancerIP>:8084
 $ hal deploy apply
 ```
 
-Have fun!
+Now, go to your browser and access http://<LoadBalancerIP>:9000 and have fun!
 
-
+![spinnaker-hello](https://user-images.githubusercontent.com/35708820/82512524-c36bd100-9ae6-11ea-83be-46a4a5cfad03.png)
