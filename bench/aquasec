@@ -1,1 +1,3 @@
 $ sudo docker run --rm -v `pwd`:/host aquasec/kube-bench:latest install
+
+$./kube-bench master > orig.report
