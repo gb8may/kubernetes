@@ -81,6 +81,12 @@ hal config storage edit --type s3
 
 #### 5. Deploy Spinnaker
 
+- Choose the version
+```
+$ hal version list
+$ hal config version edit --version x.xx.x
+```
+
 - Now let's deploy Spinnaker
 ```
 $ hal deploy apply
