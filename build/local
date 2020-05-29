@@ -156,3 +156,30 @@ sudo apt install -y kubelet=1.16.6-00
 Hold the version of kubelet at 1.16.6:
 
 sudo apt-mark hold kubelet
+
+UPDATE S.O
+
+See which pods are running on which nodes:
+
+kubectl get pods -o wide
+Evict the pods on a node:
+
+kubectl drain [node_name] --ignore-daemonsets
+Watch as the node changes status:
+
+kubectl get nodes -w
+Schedule pods to the node after maintenance is complete:
+
+kubectl uncordon [node_name]
+Remove a node from the cluster:
+
+kubectl delete node [node_name]
+Generate a new token:
+
+sudo kubeadm token generate
+List the tokens:
+
+sudo kubeadm token list
+Print the kubeadm join command to join a node to the cluster:
+
+sudo kubeadm token create [token_name] --ttl 2h --print-join-command
