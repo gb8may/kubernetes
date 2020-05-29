@@ -216,5 +216,5 @@ Zip up the contents of the etcd directory:
 sudo tar -zcvf etcd.tar.gz /etc/kubernetes/pki/etcd
 Copy the etcd directory to another server:
 
-scp etcd.tar.gz cloud_user@18.219.235.42:~/
+scp etcd.tar.gz user@IP:~/
 
