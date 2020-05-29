@@ -218,3 +218,27 @@ Copy the etcd directory to another server:
 
 scp etcd.tar.gz user@IP:~/
 
+NETWORKING
+
+See which node our pod is on:
+
+kubectl get pods -o wide
+Log in to the node:
+
+ssh [node_name]
+View the node's virtual network interfaces:
+
+ifconfig
+View the containers in the pod:
+
+docker ps
+Get the process ID for the container:
+
+docker inspect --format '{{ .State.Pid }}' [container_id]
+Use nsenter to run a command in the process's network namespace:
+
+nsenter -t [container_pid] -n ip addr
+
+CNI PLUGIN INSTALL
+
+kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/bc79dd1505b0c8681ece4de4c0d86c5cd2643275/Documentation/kube-flannel.yml
