@@ -242,3 +242,4 @@ nsenter -t [container_pid] -n ip addr
 CNI PLUGIN INSTALL
 
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/bc79dd1505b0c8681ece4de4c0d86c5cd2643275/Documentation/kube-flannel.yml
+(https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml)
