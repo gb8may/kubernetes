@@ -80,3 +80,33 @@ kubeadm init --config=kubeadm-config.yaml
 Watch as pods are created in the default namespace:
 
 kubectl get pods -n kube-system -w
+
+SECURE CLUSTER COMMUNICATION
+
+View the kube-config:
+
+cat .kube/config | more
+View the service account token:
+
+kubectl get secrets
+Create a new namespace named my-ns:
+
+kubectl create ns my-ns
+Run the kube-proxy pod in the my-ns namespace:
+
+kubectl run test --image=chadmcrowell/kubectl-proxy -n my-ns
+List the pods in the my-ns namespace:
+
+kubectl get pods -n my-ns
+Run a shell in the newly created pod:
+
+kubectl exec -it <name-of-pod> -n my-ns sh
+List the services in the namespace via API call:
+
+curl localhost:8001/api/v1/namespaces/my-ns/services
+View the token file from within a pod:
+
+cat /var/run/secrets/kubernetes.io/serviceaccount/token
+List the service account resources in your cluster:
+
+kubectl get serviceaccounts
