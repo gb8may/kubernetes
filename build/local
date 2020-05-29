@@ -1,3 +1,5 @@
+CREATING A CLUSTER LOCALY (OR EC2 INSTANCE)
+
 Get the Docker gpg key:
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -48,6 +50,8 @@ sudo kubeadm join [your unique string from the kubeadm init command]
 Verify the worker nodes have joined the cluster successfully:
 
 kubectl get nodes
+
+ADD HIGH AVAILABILITY AND FAULT TOLERANCE
 
 View the pods in the default namespace with a custom view:
 
