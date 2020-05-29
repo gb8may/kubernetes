@@ -148,6 +148,7 @@ Upgrade kubectl:
 sudo apt install -y kubectl=1.16.6-00
 Hold the version of kubectl at 1.16.6:
 
+(Master and Nodes)
 sudo apt-mark hold kubectl
 Upgrade the version of kubelet:
 
